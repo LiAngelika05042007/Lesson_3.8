@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fruitFragment">
+
+    <fragment
+        android:id="@+id/fruitFragment"
+        android:name="com.angelika.lesson_38.FruitFragment"
+        android:label="fragment_fruit"
+        tools:layout="@layout/fragment_fruit">
+
+        <action
+            android:id="@+id/action_fruitFragment_to_addingFruitFragment"
+            app:destination="@id/addingFruitFragment" />
+
+        <action
+            android:id="@+id/action_fruitFragment_to_BFragment2"
+            app:destination="@id/BFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addingFruitFragment"
+        android:name="com.angelika.lesson_38.AddingFruitFragment"
+        android:label="fragment_adding_fruit"
+        tools:layout="@layout/fragment_adding_fruit">
+    </fragment>
+
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.angelika.lesson_38.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b">
+
+        <argument
+            android:name="model"
+            app:argType="com.angelika.lesson_38.Fruit" />
+    </fragment>
+
+</navigation>
